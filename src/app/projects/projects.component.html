@@ -1,0 +1,16 @@
+<div style="width: 100%; overflow: hidden">
+  <div style="width: 600px; float: left">
+    <h1>
+      {{ projectname }}
+    </h1>
+  </div>
+  <div style="float: right">
+    <h1>{{ totalhours }} hours</h1>
+  </div>
+</div>
+
+<kendo-grid [resizable]="true" [data]="gridData" [sortable]="true" [height]="200">
+  <kendo-grid-column field="taskname" title="Task" [width]="140"></kendo-grid-column>
+  <kendo-grid-column field="userid" title="Assigned To" [width]="120"></kendo-grid-column>
+  <kendo-grid-column field="hours" title="Hours" [width]="120"></kendo-grid-column>
+</kendo-grid>

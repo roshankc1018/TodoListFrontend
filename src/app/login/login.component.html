@@ -1,0 +1,27 @@
+<div class="container-fluid" id="authentication-wrapper">
+  <div id="welcome-message">
+    <h4>Log in to continue</h4>
+  </div>
+  <div id="wrap">
+    <img src="https://bit.ly/2udBml1" alt="profile picture" />
+  </div>
+  <div class="row">
+    <form [formGroup]="loginform" (ngSubmit)="onLogin()">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <kendo-textbox-container floatingLabel="Username">
+          <input kendoTextBox type="name" id="name" formControlName="name" class="form-control" />
+        </kendo-textbox-container>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <kendo-textbox-container floatingLabel="Password">
+          <input kendoTextBox type="password" id="password" formControlName="password" class="form-control" />
+        </kendo-textbox-container>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <button class="submit-btn btn btn-success">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

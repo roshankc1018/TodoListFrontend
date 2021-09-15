@@ -1,0 +1,12 @@
+<h1>{{ name.charAt(0).toUpperCase() + name.slice(1) }}'s Project List</h1>
+
+<kendo-grid [resizable]="true" [data]="gridData" [sortable]="true" [height]="200">
+  <kendo-grid-column field="projectname" title="Projectname" [width]="140"></kendo-grid-column>
+  <kendo-grid-column field="userid" title="Members" [width]="120"></kendo-grid-column>
+  <kendo-grid-column field="hours" title="Hours" [width]="140"></kendo-grid-column>
+  <kendo-grid-command-column title="command" [width]="120">
+    <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+      <button kendoGridRemoveCommand (click)="onSubmit(dataItem.projectname)">View</button>
+    </ng-template>
+  </kendo-grid-command-column>
+</kendo-grid>
